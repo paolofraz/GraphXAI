@@ -45,7 +45,7 @@ class MUTAG(GraphDataset):
         self.graphs = TUDataset(root=root, name='MUTAG')
         # self.graphs retains all qualitative and quantitative attributes from PyG
 
-        self.__make_explanations()
+        #self.__make_explanations() # Paolo: This is not working as is...
 
         super().__init__(name = 'MUTAG', seed = seed, split_sizes = split_sizes)
 

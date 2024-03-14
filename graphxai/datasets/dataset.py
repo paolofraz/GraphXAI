@@ -361,7 +361,10 @@ class GraphDataset:
         pass
 
     def __getitem__(self, idx):
-        return self.graphs[idx], self.explanations[idx]
+        try:
+            return self.graphs[idx], self.explanations[idx]
+        except AttributeError:
+            return self.graphs[idx]
 
     def __len__(self):
         return len(self.graphs)
